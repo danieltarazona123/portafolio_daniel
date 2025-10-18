@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Tarazona| Portafolio de Topografía y Fotogrametría</title>
+    
+    <meta name="description" content="Portafolio profesional de [Tu Nombre], especialista en topografía y fotogrametría. Proyectos interactivos en 3D y servicios de levantamiento digital.">
+    <meta name="author" content="Tu Nombre">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+</head>
+<body>
+    <!-- ============================================= -->
+    <!-- ============ NAVBAR FIJO ==================== -->
+    <!-- ============================================= -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <img src="imagenes/logo.jpg" alt="Logo Personal">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about">Fotogrametría</a></li>
+                <li><a href="#projects">Proyectos 3D</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#me">Sobre Mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <!--secion hero-->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">GEMELOS DIGITALES Y TOPOGRAFÍA DE PRECISIÓN</h1>
+                <p class="hero-subtitle">Transformo la realidad en datos interactivos. Soluciones con drones y modelado 3D para ingeniería y construcción.</p>
+                <a href="#projects" class="hero-cta-button">Explora Mis Proyectos</a>
+            </div>
+        </section>
+
+<!-- ============================= -->
+<!-- Sección de Fotogrametría -->
+<!-- ============================= -->
+<section class="info-section" id="about">
+  <div class="info-container">
+    <div class="info-text">
+      <h2 class="section-title">¿Qué es la Fotogrametría?</h2>
+      <p>Es la tecnología que me permite obtener mediciones precisas y crear modelos 3D a partir de fotografías. Mediante drones y cámaras especializadas, capturo imágenes desde múltiples ángulos para procesarlas con software avanzado. El resultado son gemelos digitales georreferenciados, ortofotos y nubes de puntos que proveen datos espaciales de incalculable valor.</p>
+
+      <h3 class="subsection-title">Mi Flujo de Trabajo</h3>
+      <ol>
+        <li><strong>Consulta y Plan de Vuelo:</strong> Entiendo tus necesidades para diseñar la captura de datos más eficiente.</li>
+        <li><strong>Captura de Imágenes:</strong> Utilizo drones y cámaras de alta resolución para garantizar la calidad y precisión de los datos.</li>
+        <li><strong>Procesamiento de Datos:</strong> Alineo las imágenes, genero nubes de puntos y creo los modelos 3D, georreferenciando todo para una exactitud milimétrica.</li>
+        <li><strong>Entregables a Medida:</strong> Te entrego los resultados en el formato que necesitas: modelos 3D interactivos, ortofotos, mapas de contorno, y más.</li>
+      </ol>
+    </div>
+
+    <!-- Video que se activa al hacer scroll -->
+    <div class="info-image">
+      <video id="video-dron" src="imagenes/lv_0_20251017183350.mp4" loop controls playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- Script para reproducir en scroll -->
+<!-- ============================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("video-dron");
+  video.volume = 0.5; // volumen inicial al 50%
+
+  // Observador: detecta cuándo la sección entra en pantalla
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // si está visible, reproducir
+        video.play();
+      } else {
+        // si sale de pantalla, pausar
+        video.pause();
+      }
+    });
+  }, { threshold: 0.5 }); // 0.5 = la mitad visible
+
+  observer.observe(video);
+});
+</script>
+
+<!-- ============================= -->
+<!-- Estilos del video -->
+<!-- ============================= -->
+<style>
+.info-image video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.info-image video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+</style>
+
+        
+        <section class="tech-section" id="tech">
+            <h2 class="section-title">Mi Tecnología</h2>
+            <p class="section-subtitle">Utilizo equipos y software de última generación para garantizar resultados de la más alta calidad.</p>
+            <div class="tech-grid">
+                <div class="tech-item"><i class="fas fa-drone"></i><h3>Drones DJI Enterprise</h3><p>Equipados con sensores RTK para una precisión centimétrica.</p></div>
+                <div class="tech-item"><i class="fas fa-camera-retro"></i><h3>Cámaras Full-Frame</h3><p>Para capturar imágenes de alta resolución y gran detalle.</p></div>
+                <div class="tech-item"><i class="fas fa-project-diagram"></i><h3>Agisoft Metashape</h3><p>Software líder en la industria para el procesamiento fotogramétrico.</p></div>
+                <div class="tech-item"><i class="fas fa-drafting-compass"></i><h3>AutoCAD Civil 3D</h3><p>Para la creación de planos, perfiles y cálculo de volúmenes.</p></div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- ============ PROYECTOS 3D (OPTIMIZADO) ====== -->
+        <!-- ============================================= -->
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Portafolio Interactivo 3D</h2>
+            <p class="section-subtitle">Usa el ratón para rotar y la rueda para hacer zoom. Explora los detalles.</p>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Levantamiento para Construcción</h3>
+                    <p>Modelo digital de terreno para cálculo de volúmenes y planificación de obra.</p>
+                    <!-- MODEL-VIEWER MEJORADO -->
+                    <model-viewer
+                        src="imagenes/imagenes 3d/base_basic_shaded_draco.glb"
+                        poster="https://placehold.co/600x400/333/fff?text=Cargando+Modelo..."
+                        alt="Modelo 3D de un terreno"
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="1"
+                        environment-image="neutral"
+                        ar ar-modes="webxr scene-viewer quick-look"
+                        loading="lazy"
+                        draco-decoder-path="https://www.gstatic.com/draco/v1/decoders/"
+                    ></model-viewer>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Inspección de Infraestructura</h3>
+                    <p>Gemelo digital de un puente para análisis estructural y detección de anomalías.</p>
+                    <!-- MODEL-VIEWER MEJORADO -->
+                    <model-viewer
+                        src="https://modelviewer.dev/shared-assets/models/Horse.glb"
+                        poster="https://placehold.co/600x400/333/fff?text=Cargando+Modelo..."
+                        alt="Modelo 3D de un puente"
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="1"
+                        environment-image="neutral"
+                        loading="lazy"
+                    ></model-viewer>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Documentación de Patrimonio</h3>
+                    <p>Digitalización de sitio arqueológico para preservación y estudio virtual.</p>
+                    <!-- MODEL-VIEWER MEJORADO -->
+                    <model-viewer
+                        src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+                        poster="https://placehold.co/600x400/333/fff?text=Cargando+Modelo..."
+                        alt="Modelo 3D de ruinas"
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="1"
+                        environment-image="neutral"
+                        loading="lazy"
+                    ></model-viewer>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- galeria ... -->
+        <section class="gallery-section" id="gallery">
+            <h2 class="section-title">Galería de Proyectos</h2>
+            <p class="section-subtitle">Imágenes de levantamientos en campo, procesos y resultados finales.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+1" alt="Imagen del proyecto 1"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+2" alt="Imagen del proyecto 2"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+3" alt="Imagen del proyecto 3"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+4" alt="Imagen del proyecto 4"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+5" alt="Imagen del proyecto 5"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333/fff?text=Proyecto+6" alt="Imagen del proyecto 6"></div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="testimonials">
+            <h2 class="section-title">Lo que dicen mis clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"El nivel de detalle en el modelo 3D superó nuestras expectativas. Nos permitió identificar problemas antes de que ocurrieran en obra. ¡Totalmente recomendado!"</p>
+                    <h4>- Ing. Juan Pérez, Constructora XYZ</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Un servicio rápido, profesional y con una precisión impecable. Los datos entregados fueron fundamentales para la planificación de nuestro proyecto inmobiliario."</p>
+                    <h4>- Arq. María García, Inmobiliaria ABC</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me-section" id="me">
+            <div class="about-me-container">
+                <div class="about-me-photo">
+                    <img src="imagenes/perfil.jpg" alt="Foto personal de [Daniel Tarazona ]">
+                </div>
+                <div class="about-me-text">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p>Soy [Daniel Tarazona ], un topógrafo apasionado por la tecnología y la precisión. Con formación en SENCICO, mi objetivo es aplicar las herramientas más avanzadas para ofrecer soluciones eficientes y visualmente impactantes.</p>
+                    <p>Mi experiencia abarca desde levantamientos tradicionales hasta la implementación de flujos de trabajo con drones y fotogrametría, siempre buscando la mejor manera de convertir datos complejos en información clara y útil para mis clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <h2 class="section-title">Aplicaciones y Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card"><i class="fas fa-hard-hat"></i><h4>Construcción e Infraestructura</h4><p>Creación de modelos del sitio, documentación "as-built" y cálculo de volúmenes.</p></div>
+                <div class="service-card"><i class="fas fa-map-marked-alt"></i><h4>Topografía y Cartografía</h4><p>Estudios topográficos de alta precisión y mapeo 3D para proyectos a gran escala.</p></div>
+                <div class="service-card"><i class="fas fa-landmark"></i><h4>Preservación de Patrimonio</h4><p>Documentación de sitios culturales y artefactos históricos sin contacto físico.</p></div>
+                <div class="service-card"><i class="fas fa-leaf"></i><h4>Monitoreo Ambiental</h4><p>Estudio de cambios en el terreno como erosión, deforestación o impacto de desastres.</p></div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>¿Qué tan precisa es la fotogrametría?</h4>
+                    <p>Con el equipo y la metodología correctos, se pueden alcanzar precisiones centimétricas, comparables e incluso superiores a los métodos tradicionales en ciertas aplicaciones.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Cuánto tiempo toma completar un proyecto?</h4>
+                    <p>Depende de la escala y complejidad, pero la captura de datos con drones es significativamente más rápida que la topografía convencional, reduciendo drásticamente los tiempos en campo.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Qué entregables puedo recibir?</h4>
+                    <p>Desde modelos 3D interactivos, nubes de puntos, ortomosaicos de alta resolución, hasta los clásicos planos CAD con curvas de nivel y perfiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Hablemos de tu Proyecto</h2>
+            <p class="section-subtitle">Estoy disponible para nuevos desafíos. Contáctame directamente a través de tu canal preferido.</p>
+            <div class="contact-grid">
+                <a href="https://wa.me/51999999999" target="_blank" class="contact-link whatsapp"><i class="fab fa-whatsapp"></i><span>Enviar WhatsApp</span></a>
+                <a href="https://facebook.com/tu-usuario" target="_blank" class="contact-link facebook"><i class="fab fa-facebook-f"></i><span>Ver en Facebook</span></a>
+                <a href="tel:+51999999999" class="contact-link phone"><i class="fas fa-phone"></i><span>Llamar Ahora</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p><strong>Formado en SENCICO</strong></p>
+            <div class="footer-social-links">
+                <a href="https://wa.me/51999999999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com/tu-usuario" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2025 Daniel Tarazona| Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
