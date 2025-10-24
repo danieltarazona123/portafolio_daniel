@@ -1,17 +1,4 @@
-// =================================================================================================
-//
-//   Proyecto: Typewriter Avanzado con GSAP, LogTigr, Typed.js, anime.js y Three.js – para Señor Stark
-//   Autor: Gemini AI
-//   Versión: 1.1 (Corregida)
-//   Fecha: 16 de Octubre de 2025
-//   Descripción: Un script exhaustivo y modular para crear un efecto de máquina de escribir
-//                avanzado, integrando múltiples librerías de animación, audio procedural,
-//                un fondo 3D interactivo y un sistema de control y depuración completo.
-//
-// =================================================================================================
 
-// --- MODO ESTRICTO ---
-// Se activa el modo estricto de JavaScript para prevenir errores comunes y asegurar un código más limpio.
 'use strict';
 
 // --- ENVOLTORIO IIFE (Immediately Invoked Function Expression) ---
@@ -30,23 +17,22 @@
         heroSection: '.hero-section',
         titleElement: '.hero-title',
         subtitleElement: '.hero-subtitle',
-
-        // --- Configuración de Typed.js ---
-        // Parámetros para la librería que simula la escritura.
+        // --- Typed.js Configuration ---
+        // Parameters for the library that simulates typing.
         typed: {
-            // Frases que se escribirán y borrarán en el título principal.
+            // Phrases to be typed and erased in the main title.
             titleStrings: [
-                "GEMELOS DIGITALES Y TOPOGRAFÍA DE PRECISIÓN",
-                "MODELADO 3D CON DRONES DE ALTA GAMA",
-                "TRANSFORMANDO DATOS EN DECISIONES INTELIGENTES",
-                "INGENIERÍA VISUAL PARA EL MUNDO REAL"
+            "DIGITAL TWINS AND PRECISION TOPOGRAPHY",
+            "3D MODELING WITH HIGH-END DRONES",
+            "TRANSFORMING DATA INTO SMART DECISIONS",
+            "VISUAL ENGINEERING FOR THE REAL WORLD"
             ],
-            // Frases para el subtítulo. Se sincronizarán con las del título.
+            // Phrases for the subtitle. They will sync with the title.
             subtitleStrings: [
-                "Transformo la realidad en datos interactivos. Soluciones con drones y modelado 3D para ingeniería y construcción.",
-                "Precisión centimétrica para inspección de infraestructuras, construcción y patrimonio cultural.",
-                "Visualiza tus proyectos como nunca antes con nubes de puntos y ortofotos de alta resolución.",
-                "Especialista en fotogrametría, levantamientos topográficos y análisis geoespacial."
+            "I transform reality into interactive data. Solutions with drones and 3D modeling for engineering and construction.",
+            "Centimeter precision for infrastructure inspection, construction, and cultural heritage.",
+            "Visualize your projects like never before with point clouds and high-resolution orthophotos.",
+            "Specialist in photogrammetry, topographic surveys, and geospatial analysis."
             ],
             typeSpeed: 50,          // Velocidad de escritura en milisegundos.
             backSpeed: 25,          // Velocidad de borrado en milisegundos.
