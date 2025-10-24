@@ -21,17 +21,16 @@
         typed: {
             // Phrases to be typed and erased in the main title.
             titleStrings: [
-            "DIGITAL TWINS AND PRECISION TOPOGRAPHY",
+            "VIRTUAL REPRESENTATION AND PRECISION TOPOGRAPHY",
             "3D MODELING WITH HIGH-END DRONES",
-            "TRANSFORMING DATA INTO SMART DECISIONS",
-            "VISUAL ENGINEERING FOR THE REAL WORLD"
+            "TRANSFORMING DATA INTO SMART DECISIONS"
             ],
             // Phrases for the subtitle. They will sync with the title.
             subtitleStrings: [
             "I transform reality into interactive data. Solutions with drones and 3D modeling for engineering and construction.",
-            "Centimeter precision for infrastructure inspection, construction, and cultural heritage.",
-            "Visualize your projects like never before with point clouds and high-resolution orthophotos.",
-            "Specialist in photogrammetry, topographic surveys, and geospatial analysis."
+            "Centimeter-level accuracy for infrastructure, construction, and cultural heritage inspection.",
+            "Visualize your projects like never before with high-resolution point clouds and orthophotos.",
+            "Specialist in photogrammetry, topographic surveys."
             ],
             typeSpeed: 50,          // Velocidad de escritura en milisegundos.
             backSpeed: 25,          // Velocidad de borrado en milisegundos.
