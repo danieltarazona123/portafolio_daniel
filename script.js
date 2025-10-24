@@ -1,4 +1,3 @@
-
 'use strict';
 
 // --- ENVOLTORIO IIFE (Immediately Invoked Function Expression) ---
